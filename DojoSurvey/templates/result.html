@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+
+            .main{
+           border: black 1px solid;
+
+           margin: 80px 150px 0 550px;
+           height: 300px;
+           width: 500px;
+
+       }
+
+            h5{
+                  text-align: left;
+                margin-left: 40px;
+
+
+            }
+
+
+            p{
+                text-align: left;
+                margin-left: 50px;
+            }
+
+
+        button{
+            color: white;
+            background-color: darkcyan;
+           text-align: center;
+            margin: 20px 0 20px 350px;
+            width: 90px;
+            box-shadow: black 2px 2px;
+        }
+
+    </style>
+</head>
+<body>
+<form action="/" >
+      {% csrf_token %}
+<div class="main">
+
+    <h5> Submitted Info  </h5>
+     <p>  Name: {{name}} </p>
+    <p> Dojo Location: {{location}} </p>
+    <p> Favorite Language: {{ language }} </p>
+    <p> Comment: {{ commit }} </p>
+
+
+    <button> Go back </button>
+
+
+
+</div>
+    </form>
+</body>
+</html>

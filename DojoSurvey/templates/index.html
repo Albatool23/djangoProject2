@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+       .main{
+           border: black 1px solid;
+           text-align: center;
+           margin: 80px 150px 0 550px;
+           height: 400px;
+           width: 500px;
+
+       }
+
+
+       .name{
+           display: flex;
+           justify-content: space-evenly;
+           margin-top: 10px;
+       }
+
+
+       input{
+           height: 20px;
+
+           margin-top: 20px;
+       }
+
+       .loc{
+           display: flex;
+           justify-content: space-evenly;
+           margin-top: 5px;
+           margin-right: 20px;
+
+       }
+
+       select{
+          margin-top: 10px;
+           height: 20px;
+       }
+
+       .fav{
+             display: flex;
+           justify-content: space-evenly;
+           margin-top: 5px;
+           margin-right: 20px;
+
+       }
+
+       label{
+           text-align: left;
+          margin-right:  260px;
+
+
+
+       }
+
+
+
+
+        button{
+            color: white;
+            background-color: darkcyan;
+           text-align: center;
+            margin: 20px 0 20px 350px;
+            width: 60px;
+            box-shadow: black 2px 2px;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="main">
+
+    <form action="/result" method="post">
+         {% csrf_token %}
+    <div class="name">
+        <h5> Your Name: </h5>
+
+
+
+
+              <input name="name">
+
+    </div>
+    <div class="loc">
+       <h5> Dojo Location: </h5>
+        <select name="location"  >
+  <option value="san jose">San Jose</option>
+  <option value="NY"> NY</option>
+  <option value="Riyadh">Riyadh</option>
+  <option value="jeddah">jeddah</option>
+</select>
+
+    </div>
+    <div class="fav">
+        <h5> Favorite Language: </h5>
+                <select name="language" >
+  <option value="python">Python</option>
+  <option value="java">java</option>
+  <option value="php">php</option>
+  <option value="js">js</option>
+</select>
+    </div>
+
+
+   <label> Comment (optional): </label>
+
+<textarea name="commit" rows="6" cols="50">
+
+</textarea>
+
+
+    <button> Button </button>
+
+
+
+
+
+</form>
+</div>
+</body>
+</html>
